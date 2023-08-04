@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    
+    <title>La fuente de Thoth</title>
+</head>
+<body>
+    <header>
+        <h1>La fuente de Thoth</h3>
+    </header>
+<div class="contenedor">
+
+    <div class="agregar uno">
+        <h3>Agregar un nuevo libro </h3>
+        <input class="libroForm" type="text" id="autor" placeholder="Autor">
+        <input class="libroForm" type="text" id="titulo"  placeholder="Titulo">
+        <input class="libroForm" type="number" min="0000" max="2023" id="año"  placeholder="Año">
+        <input class="libroForm" type="text" id="idioma" placeholder="Idioma">
+        <input class="libroForm" type="text" id="categoria" placeholder="Categoria">
+        <br>
+        <button class="boton" type="submit" id="btnAgregar">Agregar</button>
+    </div>
+    <div class="agregar dos">
+        <h3>Lista de libros</h3>
+        <ul class="libros-ul">
+            <input type="radio" name="opcLibro" id="opcion1" value="Cien años de soledad"><label for="opcion1">Cien años de soledad</label> <br>
+            <input type="radio" name="opcLibro" id="opcion2" value="El señor de los anillos"><label for="opcion2">El señor de los anillos</label><br>
+            <input type="radio" name="opcLibro" id="opcion3" value="Yo, robot"><label for="opcion3">Yo, robot</label><br>
+            <input type="radio" name="opcLibro" id="opcion4" value="El alquimista"><label for="opcion4">El alquimista</label><br>
+            <input type="radio" name="opcLibro" id="opcion5" value="El diario de Ana Frank"><label for="opcion5">El diario de Ana Frank</label><br>
+            <input type="radio" name="opcLibro" id="opcion6" value="Desolación"><label for="opcion6">Desolación</label><br> 
+          </ul>
+        <button class="boton" type="submit" id="mostrarInfo">Mostrar Información</button>
+        <button class="boton" type="submit" id="eliminar">Eliminar</button>
+
+
+    </div>
+    <div class="agregar tres">
+        <h3>Informacion del libro</h3>
+        <div class="contenedorTabla" id="contenedorTabla">
+            <table class="tablaLibros" id="tablaLibros">
+                <tr>
+                    <th>Autor</th>
+                    <th>Título</th>
+                    <th>Año</th>
+                    <th>Idioma</th>
+                    <th>Categoria</th>
+                </tr>
+            </table>
+        </div>
+        <button class="boton"  id="editar" onclick="editarTabla()">Editar tabla</button>
+        <button class="boton" id="guardar" onclick="guardarTabla()">Guardar cambios</button>
+
+    </div>
+</div>    
+    <script src="codigo.js"></script>
+</body>
+</html>
