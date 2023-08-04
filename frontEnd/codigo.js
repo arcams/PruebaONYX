@@ -1,3 +1,4 @@
+// Leemos los botones y listas con las que trabajaremos a lo largo del codigo
 
 const botonInfo= document.getElementById('mostrarInfo');
 const botonEliminar= document.getElementById('eliminar');
@@ -5,6 +6,9 @@ const botonAgregar=document.getElementById('btnAgregar');
 
 const contenedorTabla= document.getElementById('contenedorTabla');
 var UlLista= document.querySelector(".libros-ul");
+
+
+// Primero comenzamos con los listeners de los botones asociado a las peticiones que se haran mediante funciones que estaran mas abajo en el codigo.
 
 botonAgregar.addEventListener('click',()=>{
     let opciones= {
@@ -46,6 +50,7 @@ botonInfo.addEventListener('click', (event)=>{
     enviarDatos(leerDatos());
 });
 
+// Desde aqui comienzan las funciones que haran las peticiones, GET, POST, PUT Y DELETE. Ademas de las funciones de edicion de tabla y guardar que estaran bajo del todo.
 
 function agregarDatos(){
     let autor=document.getElementById('autor').value;

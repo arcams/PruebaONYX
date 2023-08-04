@@ -1,3 +1,5 @@
+// Este es el archivo principal de la api, aqui comenzamos asignando los metodos que nesecitaremos como express y cors. ademas de la "base de datos"(libreria) y el puerto.
+
 const express = require('express');
 const app = express();
 const cors = require('cors');
@@ -16,6 +18,7 @@ app.use(express.json({
 
 app.use(cors());
 
+//Routing y Peticiones
 app.get('/libros',(req,res)=>{
     // let decodificada = decodeURIComponent(req.url);
     let objLibro=JSON.parse(req.query.datos)
@@ -57,6 +60,8 @@ app.put('/libros',(req,res)=>{
     res.send(JSON.stringify(libroActualizado));
     console.log(libroActualizado);
 })
+
+// por ultimo el puerto de escucha.
 app.listen(PORT, ()=>{
     console.log("el servidor esta escuchando....")
 })
